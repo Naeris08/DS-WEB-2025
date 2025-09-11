@@ -1,0 +1,27 @@
+/* seletores CSS */
+@font-face {
+    font-family: papyrus;
+    src: url(Fontes/papyrus.ttf);
+}
+h1 {
+    color: darkorchid;
+}
+p {
+    color: darkorchid;
+    font-size: medium;
+    font-family: cursive;
+}
+.eleegay {
+    color: pink;
+    font-family: papyrus;
+    font-size: 500px;
+}
+body {
+    background: linear-gradient(to right, orange, black, orange);
+}
+a {
+    color: darkorchid;
+    font-size: 20px;
+    font-family: cursive;
+    text-decoration: none;
+}
