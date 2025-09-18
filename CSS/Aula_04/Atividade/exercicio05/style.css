@@ -1,0 +1,11 @@
+.cart{
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    padding: 15px;
+    margin: 10px;
+    background-color: blueviolet;
+    text-align: center;
+    text-size-adjust: 5px;
+}
+body{margin: 0;}

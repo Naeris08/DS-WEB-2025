@@ -1,0 +1,10 @@
+.divi{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    background-color: blueviolet;
+    padding: auto;
+}

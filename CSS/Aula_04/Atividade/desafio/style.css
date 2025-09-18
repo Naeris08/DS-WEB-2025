@@ -1,0 +1,116 @@
+.cent{
+    margin: 0 auto;
+    align-content: center;
+    padding: 0 auto;
+}
+.d1{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: #faebd7;
+    text-align: center;
+    align-content: center;
+}
+.d2{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 2px dotted black;
+    background-color: #01ffff;
+    text-align: center;
+    align-content: center;
+}
+.d3{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 2px solid #3a3a5e;
+    background-color: #0000ff;
+    text-align: center;
+    align-content: center;
+}
+.d4{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 2px dotted black;
+    background-color: #8728e1;
+    text-align: center;
+    align-content: center;
+}
+.d5{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: #a52828;
+    text-align: center;
+    align-content: center;
+}
+.d6{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 2px dotted black;
+    background-color: #dcb487;
+    text-align: center;
+    align-content: center;
+}
+.d7{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 2px double black;
+    background-color: #7dff00;
+    text-align: center;
+    align-content: center;
+}
+.d8{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 2px dotted black;
+    background-color: #faebd7;
+    text-align: center;
+    align-content: center;
+}
+.d9{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: #dc143c;
+    text-align: center;
+    align-content: center;
+}
+div{
+    margin: 10px;
+}
+.d1:hover{
+    color: #ffffff;
+}
+.d2:hover{
+    color: #ffffff;
+}
+.d3:hover{
+    color: #ffffff;
+}
+.d4:hover{
+    color: #ffffff;
+}
+.d5:hover{
+    color: #ffffff;
+}
+.d6:hover{
+    color: #ffffff;
+}
+.d7:hover{
+    color: #ffffff;
+}
+.d8:hover{
+    color: #ffffff;
+}
+.d9:hover{
+    color: #ffffff;
+}
