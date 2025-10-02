@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.titulo{
+    color: #ffffff;
+}
+.titulo01{
+    text-align: center;
+    color: #ffffff;
+}
+.pro{
+    background-color: #686868;
+}
+.first{
+    background-color: rgb(185, 13, 17);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    text-align: center;
+    top: 0%;
+    z-index: 200;
+    margin-bottom: 10px;
+}
+.last{
+    background-color: rgb(185, 13, 17);
+    width: 100%;
+    height: 100px;
+    position: static;
+    text-align: center;
+    bottom: 0px;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+    border: #000000 solid 2px;
+    padding: 3px;
+    position: relative;
+    top: 4px;
+    border-radius: 30px;
+}
+a:hover{
+    color: rgb(185, 13, 17);
+}
+.pag{
+    position: relative;
+    bottom: -20px;
+    font-size: 20px;
+    color: #ffffff;
+    padding: auto;
+    border: #ffffff solid 1px;
+}
+.pag:hover{
+    color: #ffffff;
+}
+.bannerPrinc{
+    width: 100%;
+
+}
+.titsub{
+    text-align: center;
+    background-color: #ffffff;
+}
+.textBoas{
+    margin: 0px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.prato{
+    width: 40%;
+    height: 300px;
+    display: inline-block;
+    border: #000000 solid 2px;
+    border-radius: 10px;
+    margin: 30px;
+    position: relative;
+    background-color: #ffffff;
+
+}
+.foto{
+    width: 50%;
+    padding: 0 auto;
+    position: relative;
+    right: 0%;
+    top: 300%;
+    display: inline-block;
+    border-radius: 30px;
+}
+.rest{
+    width: 30%;
+    position: relative;
+    bottom: 50%;
+    left: 61%;
+    margin: 20px;
+    margin-bottom: 10%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: auto;
+
+  }
+
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #686868;
+  }
+
+  tr:nth-child(even) {
+    background-color: rgb(252, 205, 206);
+  }
+
+  tr:nth-child(odd) {
+    background-color: rgb(185, 13, 17);
+  }
+  tr:hover {
+    opacity: 0.9;
+  }
+  .pagBond {
+    color: #ffffff;
+  }
+  .form{
+    text-align: center;
+    border: #686868 solid 2px;
+    width: 50%;
+    margin: auto;
+    border-radius: 30px;
+    background-color: rgb(185, 13, 17);
+}
+label{
+    font-size: 20px;
+    font-family: cursive;
+    color: #ffffff;
+    width: 400px;
+}
+input{
+    border: #686868 solid 4px;
+    padding: 10px;
+    border-radius: 30px;
+}
+textarea{
+    border: #686868 solid 4px;
+    padding: 10px;
+    border-radius: 30px;
+}
+button{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgb(252, 205, 206);
+    font-family: cursive;
+}
+body{
+    background-image: url('fotos-prova-final/banner2.jpg');
+}
+.preco{
+    color: rgb(185, 13, 17);
+}
+button:hover{
+    color: #ffffff;
+    background-color: rgb(185, 13, 17);
+}

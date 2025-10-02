@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sabor&Arte</title>
+</head>
+<body>
+    <!-- Aqui está o menu -->
+    <div class="first">
+        <h1 class="titulo">Sabor&Arte</h1>
+        <a class="pag" href="paginaInicial.html"><i>Menu</i></a>
+        <a class="pag" href="paginaCardapio.html"><i>Cardápio</i></a>
+        <a class="pag" href="paginaPromos.html"><i>Promoções</i></a>
+        <a class="pag" href="paginaReservas.html"></i>Reserva</i></a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Aqui está o título descritivo -->
+    <h1 class="titulo01">Faça sua reserva</h1>
+    <!-- Aqui está o formulário -->
+    <div class="form">
+        <form action="processo.php" method="post">
+            <label for="name" class="labels">Nome</label>
+            <br>
+            <input type="text" id="nome" name="nome" placeholder="Digite aqui seu nome" required>
+            <br>
+            <br>
+            <label for="tel">Telefone</label>
+            <br>
+            <input type="tel" id="Telefone" name="tel" placeholder="Digite aqui seu Telefone" required>
+            <br>
+            <br>
+            <label for="email">E-mail</label>
+            <br>
+            <input type="email" id="email" name="email" placeholder="Digite aqui seu E-mail" required>
+            <br>
+            <br>
+            <label for="Data">Data</label>
+            <br>
+            <input type="date" id="date" name="date" placeholder="dd/mm/yyyy" required>
+            <br>
+            <br>
+            <label for="num">Quantidade de pessoas</label>
+            <br>
+            <input type="number" id="num" name="num" placeholder="Digite quantas pessoas vão" maxlength="2" required>
+            <br>
+            <br>
+            <label for="resumo">Observações</label>
+            <br>
+            <textarea id="nota" name="nota" rows="6" cols="50" max-length="300" placeholder="Digite aqui alguma observação." required> 
+            
+            </textarea>
+            <br>
+            <br>
+            <button class="botao" type="submit">Enviar reserva</button>
+        </form>
+    </div>
+</body>
+</html>
