@@ -1,0 +1,25 @@
+.menuFix {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    background-color: aquamarine;
+    text-align: center;
+    align-content: center;
+
+}
+.menuLat{
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 30px;
+    background-color: blanchedalmond;
+    margin-top: 10%;
+    width: 30%;
+    height: 500px;
+
+}
+p{
+    margin-left: 40%;
+    display: inline-block;
+}

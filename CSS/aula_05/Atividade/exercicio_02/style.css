@@ -1,0 +1,14 @@
+.paisao{
+    width: 400px;
+    height: 300px;
+    background-color: lightblue;
+    position: relative;
+}
+.filhao{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
