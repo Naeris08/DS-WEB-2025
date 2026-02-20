@@ -42,6 +42,6 @@ function add(){
 
 
 function remover(itemLista){
-    var item1 = document.getElementById(itemLista);
-    document.getElementById("lista").removeChild(item1);
+    var itens = document.getElementById(itemLista);
+    document.getElementById("lista").removeChild(itens);
 }
