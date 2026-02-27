@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('images.jpg');
+    cursor: crosshair;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#cachorro {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url('cachorroSemFundo.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent; 
+}
+
+.status-tela {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#game-over {
+    display: none;
+}
+
+button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ff6b81;
+}
