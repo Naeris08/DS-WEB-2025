@@ -1,0 +1,7 @@
+.container{
+    display: inline-block;
+}
+.resposta{
+    border: 1px solid black;
+    min-height: 50px;
+}
