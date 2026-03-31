@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "jao_extension",
+    "version": "0.0.1",
+    "description": "Primeira extensão do Jão",
+    "author": "João Guilherme",
+    "browser_action" :{
+        "default_title": "Primeira extensão do Jão",
+        "default_popup": "index.html"
+    }
+}

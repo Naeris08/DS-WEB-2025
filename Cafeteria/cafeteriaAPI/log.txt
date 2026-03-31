@@ -1,9 +1,0 @@
-24-03-2026 19:06:00 | GET | cafeteriaAPI
-24-03-2026 19:20:04 | GET | cafeteriaAPI
-24-03-2026 19:20:04 | GET | cafeteriaAPI
-24-03-2026 19:20:05 | GET | cafeteriaAPI
-24-03-2026 19:20:05 | GET | cafeteriaAPI
-24-03-2026 19:20:05 | GET | cafeteriaAPI
-24-03-2026 20:02:50 | POST | cafeteriaAPI/categorias
-24-03-2026 20:06:32 | POST | cafeteriaAPI/categorias
-24-03-2026 20:10:17 | POST | cafeteriaAPI/categorias
