@@ -8,12 +8,22 @@ header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS'); // Defi
 $method = $_SERVER['REQUEST_METHOD']; // Captura o método HTTP da requisição atual (GET, POST, etc.)
 $path   = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); // Extrai apenas o caminho da URL, ignorando query string
 
-// Remove barra inicial
+// Normalize path and split into segments
 $path = trim($path, '/');
-// Divide em segmentos
-$segments = explode('/',$path);
-// Pega o endpoint solicitado
-$endpoint = $segments[1] ?? '';
+$segments = array_values(array_filter(explode('/', $path), fn($s) => $s !== ''));
+
+/*
+ * Determina o endpoint de forma mais robusta:
+ * - Se a primeira parte do caminho for o nome da pasta 'cafeteria-api', assume-se que
+ *   o endpoint está na segunda posição: /cafeteria-api/categorias
+ * - Caso contrário, usa-se a primeira posição: /categorias
+ */
+$endpoint = '';
+if (isset($segments[0]) && $segments[0] === 'cafeteria-api' && isset($segments[1])) {
+    $endpoint = $segments[1];
+} elseif (isset($segments[0])) {
+    $endpoint = $segments[0];
+}
 
 //Registra log de chamada da api
 $log = date('d-m-Y H:i:s') . " | $method | $path\n";
@@ -28,6 +38,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 switch ($endpoint) {
     case 'categorias':
         require_once 'controllers/categorias.php';
+        break;
+
+    case 'produtos':
+        require_once 'controllers/produtos.php';
         break;
 
     default:

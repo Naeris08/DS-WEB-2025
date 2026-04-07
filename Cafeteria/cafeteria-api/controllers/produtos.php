@@ -43,9 +43,23 @@ switch($method){
             ]);
             break;
         }
+        // Validações simples
+        $preco = $body['preco'] ?? null;
+        $categoria_id = $body['categoria_id'] ?? null;
+
+        if ($preco === null || $categoria_id === null) {
+            http_response_code(400);
+            echo json_encode([
+                'status' => 'error',
+                'message' => 'Campos preco e categoria_id são obrigatórios.'
+            ]);
+            break;
+        }
+
+        // SQL corrigido: lista de colunas e lista de valores devem corresponder
         $database->executeQuery(
-            "INSERT INTO produtos (nome), (preco), (categoria_id)  VALUES (:nome), (:preco), (:categoria_id)",
-            [ ':nome' => $nome, ':preco' => $body['preco'], ':categoria_id' => $body['categoria_id'] ]
+            "INSERT INTO produtos (nome, preco, categoria_id) VALUES (:nome, :preco, :categoria_id)",
+            [ ':nome' => $nome, ':preco' => $preco, ':categoria_id' => $categoria_id ]
         );
 
         http_response_code(201);
