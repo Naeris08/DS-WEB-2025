@@ -1,31 +1,34 @@
 
 var divResposta = document.getElementById("resposta");
-const apiUrl = 'http://localhost/cafeteria-api/produtos';
+const apiUrl = 'http://localhost/cafeteria-api/pedidos';
 // os inputs
 var inputNome = document.getElementById("nome");
-var inputPreco = document.getElementById("preco");
-var inputCategoriaId = document.getElementById("categoria_id");
+//~var inputPreco = document.getElementById("preco");
+//~var inputCategoriaId = document.getElementById("categoria_id");
 
 document.addEventListener('DOMContentLoaded', () => {
-    getProdutos();
-    carregarCategorias();
+    getPedidos();
+    //carregarCategorias(); // Descomente se for usar categorias
 });
-document.getElementById('botaoEnviar').addEventListener('click', postProduto);
+document.getElementById('botaoEnviar').addEventListener('click', postPedido);
 
-async function getProdutos() {
+async function getPedidos() {
     var requisicao = await fetch(apiUrl)
     var resposta = await requisicao.json()
 
     console.log(resposta);
 
     // Gera as linhas automaticamente para todos os itens do array
-    const linhas = resposta.data.map(item => `
+    const linhas = resposta.data.map(cliente => `
         <tr>
-            <td>${item.id}</td>
-            <td>${item.nome}</td>
-            <td>${item.preco ?? ''}</td>
-            <td>${item.categoria_id ?? ''}</td>
-            <td><button onclick="deleteProduto(${item.id})">Deletar</button></td>
+            <td>${cliente.id}</td>
+            <td>${cliente.cliente}</td>
+            <td>${cliente.total ?? ''}</td>
+            <td>${cliente.criado_em ?? ''}</td>
+            <td>
+                <button onclick="deleteProduto(${cliente.id})">Deletar</button>
+                <a href="editar-pedido.html?id=${cliente.id}"><button>Editar</button></a>
+            </td>
         </tr>
     `).join("");
     
@@ -34,13 +37,13 @@ async function getProdutos() {
         <table class="sua-classe">
             <thead>
                 <tr>
-                    <th colspan="5">Produtos Cadastrados</th>
+                    <th colspan="5">Pedidos Cadastrados</th>
                 </tr>
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Preço</th>
-                    <th>Categoria ID</th>
+                    <th>Horário</th>
                     <th>Opções</th>
                 </tr>
             </thead>
@@ -51,27 +54,17 @@ async function getProdutos() {
     `;
 }
 
-async function postProduto() {
+async function postPedido() {
     // Cria payload com validações básicas
+
     const payload = {
-        nome: (inputNome.value || '').trim(),
-        preco: inputPreco.value ? parseFloat(inputPreco.value) : null,
-        categoria_id: inputCategoriaId.value ? parseInt(inputCategoriaId.value) : null
+        nome: (inputNome.value || '').trim()
     };
 
     if (!payload.nome) {
-        alert('Informe o nome do produto.');
+        alert('Informe o nome do cliente.');
         return;
     }
-    if (payload.preco === null || isNaN(payload.preco)) {
-        alert('Informe o preço do produto.');
-        return;
-    }
-    if (!payload.categoria_id || isNaN(payload.categoria_id)) {
-        alert('Selecione uma categoria.');
-        return;
-    }
-
     var requisicao = await fetch(apiUrl, {
         method:  "POST",
         headers: { 'Content-Type': 'application/json' },
@@ -82,11 +75,10 @@ async function postProduto() {
     console.log(resposta);
 
     //Limpa os campos
-    inputNome.value = "";
-    inputPreco.value = "";
-    inputCategoriaId.value = "";
 
-    getProdutos();
+    inputNome.value = "";
+
+    getPedidos();
 }
 
 
@@ -98,13 +90,14 @@ async function deleteProduto(id) {
     var resposta = await requisicao.json()
     console.log(resposta)
  
-    getProdutos()
+    getPedidos()
 }
 
 // Função para carregar categorias no select
+/*
 async function carregarCategorias() {
     const selectCategoria = document.getElementById('categoria_id');
-    // Limpa opções antigas, mantendo o primeiro
+    //! Limpa opções antigas, mantendo o primeiro
     selectCategoria.innerHTML = '<option value="">Selecione uma categoria</option>';
     try {
         const requisicao = await fetch('http://localhost/cafeteria-api/categorias');
@@ -121,3 +114,4 @@ async function carregarCategorias() {
         console.error('Erro ao carregar categorias:', e);
     }
 }
+*/
