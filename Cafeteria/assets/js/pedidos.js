@@ -1,17 +1,15 @@
-var divResposta = document.getElementById("resposta");
-var inputCliente = document.getElementById("cliente"); // Captura do input de cliente
+var divResposta  = document.getElementById("resposta");
+var inputCliente = document.getElementById("cliente");
 
 document.addEventListener('DOMContentLoaded', getPedidos);
 document.getElementById('botaoEnviar').addEventListener('click', postPedido);
 
 async function getPedidos() {
-    // Adicionado .php na URL para garantir a comunicação no XAMPP
-    var requisicao = await fetch("http://localhost/cafeteria-api/pedidos.php")
+    var requisicao = await fetch("http://localhost/cafeteria-api/pedidos")
     var resposta = await requisicao.json()
 
     console.log(resposta);
 
-    // Gera as linhas automaticamente para todos os itens do array
     const linhas = resposta.data.map(item => `
         <tr>
             <td>${item.id}</td>
@@ -19,10 +17,11 @@ async function getPedidos() {
             <td>R$ ${item.total}</td>
             <td>
                 <button onclick="deletePedido(${item.id})">Deletar</button>
+                <a href="pedido.html?id=${item.id}">Ver Pedido</a>
             </td>
         </tr>
     `).join("");
-    
+
     divResposta.innerHTML = `
         <table class="tabela">
             <thead>
@@ -44,32 +43,27 @@ async function getPedidos() {
 }
 
 async function postPedido() {
-    // Envio do JSON com a chave "cliente" que o PHP espera
-    var requisicao = await fetch("http://localhost/cafeteria-api/pedidos.php", {
+    var requisicao = await fetch("http://localhost/cafeteria-api/pedidos", {
         method:  "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ cliente: inputCliente.value })
+        headers: { "Content-Type": "application/json" },
+        body:    JSON.stringify({ cliente: inputCliente.value })
     })
 
     var resposta = await requisicao.json()
     console.log(resposta)
-    
-    //Limpa o campo
+
     inputCliente.value = ""
 
     getPedidos()
 }
 
 async function deletePedido(id) {
-    // Adicionado .php na URL
-    var requisicao = await fetch("http://localhost/cafeteria-api/pedidos.php/" + id, {
+    var requisicao = await fetch("http://localhost/cafeteria-api/pedidos/" + id, {
         method: "DELETE"
     })
- 
+
     var resposta = await requisicao.json()
     console.log(resposta)
- 
+
     getPedidos()
 }

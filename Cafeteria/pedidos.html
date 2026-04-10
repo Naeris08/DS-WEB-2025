@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Pedidos - Cafeteria</title>
+    <title>Pedido - Cafeteria</title>
 </head>
 <body>
     <ul>
@@ -14,16 +14,21 @@
         <li><a href="categorias.html">Categorias</a></li>
     </ul>
 
+    <h1 id="nomeCliente" style="text-align: center;"></h1>
+
     <div class="formulario">
-        <h3>Abertura de Pedido</h3>
-        <label for="cliente">Nome do Cliente</label>
-        <input type="text" id="cliente" name="cliente">
-        <button type="button" id="botaoEnviar" class="button button-enviar">Abrir Pedido</button>
+        <h3>Adicionar Item ao Pedido</h3>
+        <label for="produto_id">Produto</label>
+        <select id="produto_id" name="produto_id">
+            <option value="">Selecione um produto</option>
+        </select>
+        <label for="quantidade">Quantidade</label>
+        <input type="number" id="quantidade" name="quantidade" min="1" value="1">
+        <button type="button" id="botaoAdicionarItem" class="button button-enviar">Adicionar Item</button>
     </div>
 
-    <div id="resposta" class="tabela">
-        </div>
+    <div id="resposta" class="tabela"></div>
 
-    <script src="./assets/js/pedidos.js"></script>
 </body>
+<script src="./assets/js/pedido.js"></script>
 </html>
