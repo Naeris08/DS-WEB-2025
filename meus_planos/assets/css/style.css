@@ -1,0 +1,100 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #F1E9DA;
+}
+a{
+    text-decoration: none;
+    color: #E8E4D5;
+    font-size: 30px;
+    margin: 0 20px;
+    font-family: cursive;
+
+}
+a:hover{
+    color: #0D1F1B;
+}
+table {
+    width: 90%;
+    height: 90%;
+    border-collapse: collapse;
+    margin-top: auto;
+    margin-left: 5%;
+    border-radius: 20px;
+    overflow: hidden;
+    font-family: cursive;
+    color: #0D1F1B;
+
+  }
+
+  th, td {
+    padding: 12px 15px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #01796F;
+  }
+
+  tr:nth-child(even) {
+    background-color: #01796F;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #F1E9DA;
+  }
+  tr:hover {
+    opacity: 0.9;
+  }
+  button{
+    background-color: #B2AC88;
+    border: solid 3px #0D1F1B;
+    padding: 10px 20px;
+    color: #0D1F1B;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-family: cursive;
+  }
+  button:hover{
+    background-color: #01796F;
+    color: #B2AC88;
+    border: solid 3px #B2AC88;
+  }
+.menu{
+    text-align: center;
+    background-color: #01796F;
+    padding: 0;
+    margin: 0;
+    height: 5%;
+    text-size-adjust: 50px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+}
+.tabela{
+  padding: 10px;
+  background-color: #B2AC88;
+  margin-top: 3%;
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 20px;
+}
+.campo{
+  padding: 10px;
+  border-radius: 20px;
+  border: solid 3px #0D1F1B;
+  width: 50%;
+}
+.tit{
+  color: #0D1F1B;
+  font-family: cursive;
+}
+input{
+  font-family: cursive;
+  color: #0D1F1B;
+}
+select{
+  font-family: cursive;
+  color: #0D1F1B;
+}

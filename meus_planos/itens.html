@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Itens</title>
+</head>
+
+<body>
+    <div class="menu">
+        <a href="index.html">Início</a>
+        <a href="categorias.html">Categorias</a>
+        <a href="itens.html">Itens</a>
+    </div>
+
+    <center>
+    <div class="formulario">
+        <h3 class="tit">Cadastro de Item</h3>
+        <input type="text" id="nome" name="nome" placeholder="Nome do Item" class="campo">
+        <br>
+        <br>
+            <select id="categoria_id" name="categoria" class="campo">
+                <option value="">Selecione a Categoria</option>
+            </select>
+            <br>
+            <br>
+        <button type="button" id="botaoEnviar" class="button button-enviar">Cadastrar</button>
+    </div>
+</center>
+
+    <div id="resposta" class="tabela">
+
+    </div>
+</body>
+<script src="assets/js/itens.js"></script>
+</html>
