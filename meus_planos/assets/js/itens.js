@@ -67,7 +67,8 @@ async function getProdutos() {
                         alert('Erro ao atualizar status!');
                         this.checked = !novoStatus;
                     }
-                } catch (e) {
+                } 
+                catch (e) {
                     alert('Erro ao atualizar status!');
                     this.checked = !novoStatus;
                 }
@@ -138,18 +139,9 @@ async function carregarCategorias() {
                 selectCategoria.appendChild(option);
             });
         }
-    } catch (e) {
+    } 
+    catch (e) {
         console.error('Erro ao carregar categorias:', e);
     }
 }
 
-async function deleteCategoria(id) {
-    var requisicao = await fetch(catURL + "/" + id, {
-        method: "DELETE"
-    })
-
-    var resposta = await requisicao.json()
-    console.log(resposta)
-
-    getCategorias()
-}
