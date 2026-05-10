@@ -3,7 +3,7 @@ var divResposta = document.getElementById("resposta")
 
 var inputNome = document.getElementById("nome")
 
-const catURL = "http://localhost/meus-planos-api/categorias"
+const catURL = "http://localhost/meus_planos/categorias"
 
 document.addEventListener('DOMContentLoaded', getCategorias)
 document.getElementById('botaoEnviar').addEventListener('click', postCategoria)

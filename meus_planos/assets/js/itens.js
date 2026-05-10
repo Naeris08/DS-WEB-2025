@@ -1,6 +1,6 @@
 var divResposta = document.getElementById("resposta");
-const iteURL = 'http://localhost/meus-planos-api/itens';
-const catURL = 'http://localhost/meus-planos-api/categorias';
+const iteURL = 'http://localhost/meus_planos/itens';
+const catURL = 'http://localhost/meus_planos/categorias';
 // os inputs
 var inputNome = document.getElementById("nome");
 //~ var statusITE = document.getElementById("status");
